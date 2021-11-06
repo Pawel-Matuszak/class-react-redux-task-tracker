@@ -1,9 +1,15 @@
-import React from 'react'
 
-const Button = ({color, content, onClick}) => {
-    return (
-        <button style={{backgroundColor: color}} className="btn" onClick={onClick}>{content}</button>
-    )
+import React, { Component } from 'react'
+
+class Button extends Component {
+    constructor(props){
+        super(props)
+    }
+    render() {
+        return (
+            <button style={{backgroundColor: this.props.color}} className="btn" onClick={this.props.onClick}>{this.props.content}</button>
+        )
+    }
 }
 
 export default Button
